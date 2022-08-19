@@ -58,7 +58,7 @@ export default class TableBlock {
     this.readOnly = readOnly;
     this.data = {
       withHeadings: data && data.withHeadings ? data.withHeadings : false,
-      content: data && data.content ? data.content : []
+      content: data && data.content ? Object.values(data.content).map(c => Object.values(c)) : []
     };
     this.config = config;
     this.table = null;
@@ -96,6 +96,7 @@ export default class TableBlock {
    */
   render() {
     /** creating table */
+    console.log(this.data)
     this.table = new Table(this.readOnly, this.api, this.data, this.config);
 
     /** creating container around table */

@@ -8,7 +8,7 @@
  */
 export function make(
   tagName,
-  classNames,
+  classNames, 
   attributes = {}
 ) {
   const el = document.createElement(tagName);

@@ -929,16 +929,18 @@ export default class Table {
     for (let i = 1; i <= this.numberOfRows; i++) {
       const row = this.table.querySelector(`.${CSS.row}:nth-child(${i})`);
       const cells = Array.from(row.querySelectorAll(`.${CSS.cell}`));
+      const rowCells = cells.map(c => c.innerHTML);
       const isEmptyRow = cells.every(cell => !cell.textContent.trim());
 
       if (isEmptyRow) {
         continue;
       }
-
-      data.push(cells.map(cell => cell.innerHTML));
+    
+      const parsedCells = {...rowCells}
+      data.push(parsedCells)
     }
 
-    return data;
+    return {...data};
   }
 
   /**

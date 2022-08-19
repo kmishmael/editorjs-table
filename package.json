@@ -1,7 +1,7 @@
 {
-  "name": "@editorjs/table",
-  "description": "Table for Editor.js",
-  "version": "2.0.4",
+  "name": "editorjs-table-json",
+  "description": "Table for Editor.js. Fork of @editorjs/table with object output instead of multidimensional array.",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "./dist/table.js",
   "scripts": {
@@ -9,10 +9,10 @@
     "build:dev": "webpack --mode development --watch",
     "lint": "eslint -c ./.eslintrc --ext .js --fix ."
   },
-  "repository": "https://github.com/editor-js/table",
+  "repository": "https://github.com/kmishmael/editorjs-table",
   "author": {
-    "name": "CodeX Team",
-    "email": "team@ifmo.su"
+    "name": "Kibet Ishmael",
+    "email": "kmishmael@gmail.com"
   },
   "keywords": [
     "codex",
