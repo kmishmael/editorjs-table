@@ -96,7 +96,6 @@ export default class TableBlock {
    */
   render() {
     /** creating table */
-    console.log(this.data)
     this.table = new Table(this.readOnly, this.api, this.data, this.config);
 
     /** creating container around table */
