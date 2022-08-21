@@ -8,7 +8,7 @@ module.exports = {
     library: 'Table',
     libraryExport: 'default',
     libraryTarget: 'umd'
-  },
+  }, 
   module: {
     rules: [
       {

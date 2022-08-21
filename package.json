@@ -4,8 +4,10 @@
   "version": "1.0.1",
   "license": "MIT",
   "main": "./dist/table.js",
+  "type": "module",
   "scripts": {
     "build": "webpack --mode production",
+    "post": "postcss input.css -o output.css",
     "build:dev": "webpack --mode development --watch",
     "lint": "eslint -c ./.eslintrc --ext .js --fix ."
   },
@@ -23,10 +25,11 @@
   ],
   "devDependencies": {
     "autoprefixer": "^9.3.1",
-    "css-loader": "^1.0.0",
+    "css-loader": "^1.0.1",
     "cssnano": "^4.1.7",
     "eslint": "^5.8.0",
     "eslint-config-codex": "github:codex-team/eslint-config",
+    "postcss": "^8.4.16",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.0",
@@ -35,5 +38,8 @@
     "svg-inline-loader": "^0.8.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "postcss-cli": "^10.0.0"
   }
 }
